@@ -9,6 +9,9 @@
 <body>
 
     <div class="form">
+        <!-- BOTÃO de Localização -->
+        <button class="btn" onclick="abrirLocalizacao()">Ver Local da Festa</button>
+
         <input type="text" id="nome" placeholder="Digite seu nome">
         <button class="btn" onclick="buscarFamilia()">Buscar</button>
 
@@ -23,5 +26,13 @@
     </div>
 
     <script src="script.js"></script>
+
+    <!-- Script para abrir o mapa -->
+    <script>
+    function abrirLocalizacao() {
+        window.open('https://www.google.com/maps/dir//Espa%C3%A7o+Estrela+Fest+Odila+-+Alameda+dos+Jacarand%C3%A1s,+715+-+Port%C3%B5es,+Itabirito+-+MG/@-20.2160769,-43.7771565,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xa403685fdfa5f5:0x3bd396b7d5b37a5a!2m2!1d-43.7745816!2d-20.2160769?entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D');
+    }
+    </script>
+
 </body>
 </html>
