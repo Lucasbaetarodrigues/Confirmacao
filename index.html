@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Presença</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form">
+        <input type="text" id="nome" placeholder="Digite seu nome">
+        <button class="btn" onclick="buscarFamilia()">Buscar</button>
+
+        <div id="familia-container" style="display: none; margin-top: 20px;">
+            <form id="familiaForm"></form>
+            <button class="btn" style="margin-top: 10px;" onclick="confirmarPresenca()">Confirmar Presença</button>
+        </div>
+
+        <div id="mensagem-sucesso" style="display: none; margin-top: 20px; color: green; font-weight: bold;">
+            Presença confirmada com sucesso! 🎉
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
