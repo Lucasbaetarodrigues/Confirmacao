@@ -99,7 +99,7 @@ function mostrarImagem(tipo) {
   scrollContainer.innerHTML = '';
 
   if (tipo === 'convite') {
-    scrollContainer.innerHTML = `<img src="2.png" alt="Convite" />`;
+    scrollContainer.innerHTML = `<img src="2.jpg" alt="Convite" />`;
   } else {
     scrollContainer.innerHTML = `
       <img src="3.jpg" alt="Informação 1" />
