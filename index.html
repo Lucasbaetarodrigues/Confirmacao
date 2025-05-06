@@ -1,38 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirmação de Presença</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Convite Interativo</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div id="main-container">
+    <input type="text" id="nome" placeholder="Digite seu nome" />
+    <button onclick="buscarFamilia()">Buscar</button>
 
-    <div class="form">
-        <!-- BOTÃO de Localização -->
-        <button class="btn" onclick="abrirLocalizacao()">Ver Local da Festa</button>
-
-        <input type="text" id="nome" placeholder="Digite seu nome">
-        <button class="btn" onclick="buscarFamilia()">Buscar</button>
-
-        <div id="familia-container" style="display: none; margin-top: 20px;">
-            <form id="familiaForm"></form>
-            <button class="btn" style="margin-top: 10px;" onclick="confirmarPresenca()">Confirmar Presença</button>
-        </div>
-
-        <div id="mensagem-sucesso" style="display: none; margin-top: 20px; color: green; font-weight: bold;">
-            Presença confirmada com sucesso! 🎉
-        </div>
+    <div id="familia-container" style="display:none;">
+      <form id="familiaForm"></form>
+      <button onclick="confirmarPresenca()">Confirmar Presença</button>
     </div>
 
-    <script src="script.js"></script>
+    <div id="mensagem-sucesso" style="display:none;">Presença confirmada com sucesso!</div>
 
-    <!-- Script para abrir o mapa -->
-    <script>
-    function abrirLocalizacao() {
-        window.open('https://www.google.com/maps/dir//Espa%C3%A7o+Estrela+Fest+Odila+-+Alameda+dos+Jacarand%C3%A1s,+715+-+Port%C3%B5es,+Itabirito+-+MG/@-20.2160769,-43.7771565,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xa403685fdfa5f5:0x3bd396b7d5b37a5a!2m2!1d-43.7745816!2d-20.2160769?entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D');
-    }
-    </script>
+    <div class="botoes-secundarios">
+      <button onclick="mostrarImagem('convite')">Ver Convite</button>
+      <button onclick="mostrarImagem('info')">Combinado e Cardápio</button>
+    </div>
+  </div>
 
+  <div id="imagem-container" style="display:none;">
+    <button id="voltar-btn" onclick="voltarTelaInicial()">Voltar</button>
+    <div id="scroll-imagens"></div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

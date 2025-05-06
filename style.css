@@ -1,65 +1,88 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    min-height: 100vh;
-    background-image: url('1.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-image: url('1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-/* Formulário posicionado */
-.form {
-    position: absolute;
-    bottom: 125px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 15px;
+#main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 335px;
 }
 
-.form input {
-    padding: 12px;
-    width: 280px;
-    border-radius: 12px;
-    border: 1px solid #ccc;
-    font-size: 1em;
+#nome {
+  padding: 10px;
+  width: 250px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
 }
 
-.btn {
-    padding: 12px 24px;
-    border: none;
-    background-color: rgba(211, 181, 131, 0.8);
-    color: #fff;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s;
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #d19b9b;
+  color: white;
+  cursor: pointer;
 }
 
-.btn:hover {
-    background-color: rgba(194, 164, 114, 0.9);
+button:hover {
+  background-color: #a56f6f;
 }
 
 #familiaForm label {
-    display: block;
-    margin: 5px 0;
+  display: block;
+  margin: 5px 0;
 }
 
-/* Responsivo para celular */
-@media (max-width: 600px) {
-    .form input {
-        width: 80%;
-    }
+#imagem-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  z-index: 1000;
+}
 
-    .btn {
-        width: 80%;
-    }
+#scroll-imagens {
+  width: 100%;
+}
+
+#scroll-imagens img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#voltar-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1100;
+}
+
+.botoes-secundarios {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
 }
