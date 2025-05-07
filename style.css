@@ -9,7 +9,7 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: start;
 }
 
 #main-container {
@@ -17,10 +17,10 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.85);
   padding: 20px;
   border-radius: 15px;
-  margin-top: 500px;
+  margin-top: 600px;
 }
 
 #nome {
@@ -48,41 +48,30 @@ button:hover {
   margin: 5px 0;
 }
 
+.botoes-secundarios {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
 #imagem-container {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: black;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-y: auto;
-  z-index: 1000;
+  justify-content: center;
+  z-index: 9999;
 }
 
-#scroll-imagens {
-  width: 100%;
-}
-
-#scroll-imagens img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-#voltar-btn {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 1100;
-}
-
-.botoes-secundarios {
-  margin-top: 20px;
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
-  align-items: center;
+.imagem-full {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
 }
