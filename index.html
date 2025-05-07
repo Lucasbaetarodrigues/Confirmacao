@@ -11,22 +11,23 @@
     <input type="text" id="nome" placeholder="Digite seu nome" />
     <button onclick="buscarFamilia()">Buscar</button>
 
-    <div id="familia-container" style="display:none;">
+    <div id="familia-container" style="display: none;">
       <form id="familiaForm"></form>
       <button onclick="confirmarPresenca()">Confirmar Presença</button>
     </div>
 
-    <div id="mensagem-sucesso" style="display:none;">Presença confirmada com sucesso!</div>
+    <div id="mensagem-sucesso" style="display: none;">Presença confirmada com sucesso!</div>
 
     <div class="botoes-secundarios">
-      <button onclick="mostrarImagem('convite')">Ver Convite</button>
-      <button onclick="mostrarImagem('info')">Combinado e Cardápio</button>
+      <button onclick="mostrarImagem('2.png')">Ver Convite</button>
+      <button onclick="mostrarImagem('3.png')">Ver Informações da Festa</button>
+      <button onclick="mostrarImagem('4.png')">Combinado e Cardápio</button>
     </div>
   </div>
 
-  <div id="imagem-container" style="display:none;">
-    <button id="voltar-btn" onclick="voltarTelaInicial()">Voltar</button>
-    <div id="scroll-imagens"></div>
+  <div id="imagem-container" style="display: none;">
+    <img id="imagem-exibida" src="" alt="Imagem" class="imagem-full" />
+    <button onclick="voltarTelaInicial()">Voltar</button>
   </div>
 
   <script src="script.js"></script>
