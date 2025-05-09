@@ -82,13 +82,39 @@ function removerAcentos(texto) {
 }
 
 function mostrarImagem(nomeArquivo) {
+  const container = document.getElementById('imagem-container');
   document.getElementById('main-container').style.display = 'none';
-  const imagem = document.getElementById('imagem-exibida');
-  imagem.src = nomeArquivo;
-  document.getElementById('imagem-container').style.display = 'flex';
+
+  if (nomeArquivo === 'combinados') {
+    container.innerHTML = `
+      <button onclick="voltarTelaInicial()" style="position:absolute;top:20px;left:20px;">⬅ Voltar</button>
+      <button onclick="mostrarCardapio()" style="position:absolute;top:20px;right:20px;">🍽️ Cardápio</button>
+      <img class="imagem-full" src="3.jpg" alt="Combinados" />
+    `;
+  } else {
+    container.innerHTML = `
+      <button onclick="voltarTelaInicial()" style="position:absolute;top:20px;left:20px;">⬅ Voltar</button>
+      <img class="imagem-full" src="${nomeArquivo}" alt="Imagem" />
+    `;
+  }
+
+  container.style.display = 'flex';
+}
+
+function mostrarCardapio() {
+  const container = document.getElementById('imagem-container');
+  container.innerHTML = `
+    <button onclick="voltarTelaInicial()" style="position:absolute;top:20px;left:20px;">⬅ Voltar</button>
+    <button onclick="mostrarImagem('combinados')" style="position:absolute;top:20px;right:20px;">↩️ Combinados</button>
+    <img class="imagem-full" src="4.jpg" alt="Cardápio" />
+  `;
 }
 
 function voltarTelaInicial() {
   document.getElementById('imagem-container').style.display = 'none';
   document.getElementById('main-container').style.display = 'flex';
+}
+
+function abrirMapa() {
+  window.open("https://www.google.com/maps/dir//Espa%C3%A7o+Estrela+Feste+-+alameda+dos+jacarand%C3%A1s,+715+port%C3%B5es+35450-000,+Itabirito+-+MG,+35450-000/@-20.2151282,-43.7785791,17z/data=!4m17!1m7!3m6!1s0xa402018edcba23:0x9f8dade8755f286d!2sEspa%C3%A7o+Estrela+Feste!8m2!3d-20.2151333!4d-43.7760042!16s%2Fg%2F11g8jzz0cz!4m8!1m0!1m5!1m1!1s0xa402018edcba23:0x9f8dade8755f286d!2m2!1d-43.7760091!2d-20.2151384!3e1?entry=ttu&g_ep=EgoyMDI1MDUwNi4wIKXMDSoASAFQAw%3D%3D", "_blank");
 }

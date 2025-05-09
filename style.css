@@ -25,7 +25,10 @@ body {
 
 #nome {
   padding: 10px;
-  width: 250px;
+  width: 90%;
+  max-width: 500px;
+  height: 45px;
+  font-size: 16px;
   border-radius: 10px;
   border: 1px solid #ccc;
 }
@@ -48,12 +51,32 @@ button:hover {
   margin: 5px 0;
 }
 
-.botoes-secundarios {
-  margin-top: 20px;
+.botoes-imagens {
   display: flex;
-  flex-direction: column;
   gap: 10px;
-  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.botao-mapa {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.botao-mapa button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.botao-mapa button:hover {
+  background-color: #0056b3;
 }
 
 #imagem-container {
